@@ -1,0 +1,145 @@
+.week-goods {
+  padding: 30px 30px 42px;
+  color: @asphalt;
+  background-color: @white;
+
+  &::after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+  }
+}
+
+.week-goods__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-goods__title {
+  margin: 0;
+  padding: 0 0 5px;
+}
+
+.week-goods__subtitle {
+  padding-bottom: 24px;
+  color: @teal-light;
+  font-size: 17px;
+  line-height: 1.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.week-goods__description {
+  margin: 0;
+  padding: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6em;
+}
+
+.week-goods__options {
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.33em;
+  vertical-align: middle;
+}
+
+.week-goods__options td {
+  height: 40px;
+  padding: 0;
+  vertical-align: middle;
+  border-bottom: 1px solid @lightgrey;
+
+  &:first-child {
+    padding-right: 30px;
+  }
+}
+
+.week-goods__img {
+  width: 320px;
+  margin: 0 auto 25px;
+}
+
+.week-goods__price {
+  padding-bottom: 28px;
+  font-size: 17px;
+  line-height: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .week-goods__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  .week-goods__top {
+    float: left;
+    width: 50%;
+    padding-right: 44px;
+    box-sizing: border-box;
+  }
+
+  .week-goods__bottom {
+    float: left;
+    width: 50%;
+    padding-right: 44px;
+    box-sizing: border-box;
+  }
+
+  .week-goods__description {
+    padding-bottom: 30px;
+    font-size: 17px;
+  }
+
+  .week-goods__options {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .week-goods__img {
+    float: right;
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .week-goods__price {
+    padding-bottom: 32px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .week-goods {
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
+  .week-goods__header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .week-goods__subtitle {
+    flex-basis: 175px;
+  }
+
+  .week-goods__top {
+    padding-left: 175px;
+  }
+
+  .week-goods__bottom {
+    padding-left: 175px;
+  }
+
+  .week-goods__img {
+    position: relative;
+    top: -114px;
+    height: 636px;
+    width: auto;
+  }
+}
