@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  height: 206px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -15,6 +16,7 @@
 
 .category__item {
   display: block;
+  height: 103px;
   margin: 0;
   padding: 0;
   color: @white;
@@ -26,53 +28,73 @@
   position: relative;
   display: block;
   min-height: 103px;
-  padding: 25px 120px 25px 30px;
+  padding: 25px 30px;
   box-sizing: border-box;
   color: @white;
   font-weight: bold;
+  text-align: left;
   text-decoration: none;
   background-color: @teal-light;
+  transition: all 0.2s ease;
 
   &--toys {
     background-color: #56c3b2;
   }
 
   &:hover {
+    margin-top: -5px;
+    padding-bottom: 35px;
     color: @white;
     text-decoration: none;
+
+    .category__img {
+      opacity: 0.7;
+    }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
+  &:active {
+    color: fadeout(@white, 70%);
+
+    .category__img {
+      opacity: 0.3;
+    }
+  }
+}
+
+.category__img {
+  position: absolute;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+
+  &--interior {
     right: 36px;
     top: 23px;
-    display: block;
-    width: 40px;
-    height: 62px;
-    background: url("../img/icon-interior.svg") 0 0 no-repeat scroll transparent;
-    background-size: cover;
-    opacity: 0.5;
   }
-
-  &--toys::after {
+  
+  &--toys {
     right: 27px;
     top: 21px;
-    width: 60px;
-    height: 60px;
-    background: url("../img/icon-toy.svg") 0 0 no-repeat scroll transparent;
-    background-size: cover;
-    opacity: 0.5;
+  }
+
+  path {
+    fill: #149080;
   }
 }
 
 @media (min-width: 768px) {
   .category__list {
     flex-direction: row;
+    height: auto;
   }
 
   .category__item {
+    height: 120px;
     flex-basis: 50%;
+    line-height: 1.6em;
+  }
+
+  .category__link {
+    padding: 30px 35px;
   }
 }
 
@@ -81,5 +103,16 @@
     width: 1050px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .category__img {
+    &--interior {
+      top: 30px;
+    }
+    
+    &--toys {
+      right: 35px;
+      top: 31px;
+    }
   }
 }

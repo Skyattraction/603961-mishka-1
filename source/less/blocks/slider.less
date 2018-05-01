@@ -1,5 +1,5 @@
 .slider__list {
-  margin: 0 0 46px;
+  margin: 0 0 30px;
   padding: 0;
   list-style: none;
 }
@@ -30,6 +30,16 @@
   box-shadow: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
 }
 
 .slider__arrow-button--left {
@@ -48,5 +58,21 @@
 
   .slider__arrow-button {
     border: none;
+  }
+
+  .slider__arrows {
+    position: absolute;
+    bottom: 135px;
+    right: 50px;
+    width: 25%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .slider__arrows {
+    bottom: 190px;
+    right: 0;
+    width: 175px;
   }
 }

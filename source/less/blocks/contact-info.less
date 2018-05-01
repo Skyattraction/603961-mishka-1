@@ -1,17 +1,18 @@
 .contact-info {
-  padding: 0 30px 30px;
+  padding: 0 30px 25px;
 }
 
 .contact-info__title {
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 16px;
+  font-size: 18px;
 }
 
 .contact-info__table {
   display: table;
   width: 100%;
   color: @asphalt;
-  border-size: 0;
+  border: none;
 }
 
 .contact-info__table-row {
@@ -28,6 +29,10 @@
     padding-right: 30px;
     white-space: nowrap;
   }
+  
+  span {
+    display: inline-block;
+  }
 }
 
 .contact-info__email {
@@ -35,9 +40,37 @@
   color: @asphalt;
   text-decoration: none;
   border-bottom: 1px solid @teal;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: @teal;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
+  .contact-info {
+    position: relative;
+    padding: 0 50px 43px;
+  }
+  .contact-info__flag {
+    position: absolute;
+    top: -11px;
+    right: 52px;
+    display: block;
+    width: 47px;
+    height: 81px;
+    background: url('../img/icon-flag.svg') 0 0 no-repeat scroll transparent;
+  }
+
+  .contact-info__title {
+    padding: 0 0 31px;
+    font-size: 43px;
+  }
+
   .contact-info__table {
     display: flex;
   }
@@ -48,9 +81,31 @@
 
   .contact-info__table-cell {
     font-size: 17px;
+    line-height: 1.8em;
+
+    &:first-child {
+      padding-right: 25px;
+    }
 
     & span {
       display: block;
     }
+  }
+}
+
+@media (min-width: 1150px) {
+  .contact-info__title {
+    padding: 70px 0 31px;
+    font-size: 53px;
+  }
+
+  .contact-info__flag {
+    top: 63px;
+    right: auto;
+    left: 64px;
+  }
+  
+  .contact-info__table {
+    display: table;
   }
 }

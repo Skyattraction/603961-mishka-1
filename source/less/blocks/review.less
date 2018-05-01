@@ -19,7 +19,7 @@
 
 .review__textwrap {
   height: 270px;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   overflow: hidden;
 }
 
@@ -49,8 +49,6 @@
 @media (min-width: 768px) {
   .review {
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 45px;
   }
 
   .review__title {
@@ -65,22 +63,20 @@
     height: 150px;
   }
 
-  .review__user {
-    max-width: 75%;
+  .review__text {
+    font-size: 17px;
+    line-height: 1.8em;
   }
 
-  .review__arrows {
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-    width: 25%;
+  .review__user {
+    max-width: 75%;
   }
 
   .review__button {
     position: absolute;
     top: 76px;
     right: 50px;
-    width: auto;
+    width: 174px;
   }
 }
 
@@ -88,5 +84,23 @@
   .review {
     width: 1050px;
     margin: 0 auto;
+  }
+
+  .review__title {
+    padding: 0 0 48px;
+  }
+
+  .review__button {
+    top: 80px;
+    right: 0;
+  }
+
+  .review__textwrap {
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .review__text {
+    padding-right: 100px;
   }
 }
