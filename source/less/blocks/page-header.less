@@ -1,4 +1,4 @@
-.page-header {
+.page-header__contain {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -11,8 +11,28 @@
 }
 
 .page-header__logo-link {
+  position: relative;
   display: inline-block;
   margin-top: 21px;
+  transition: all 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__logo-img {
@@ -20,18 +40,20 @@
 }
 
 @media (min-width: 768px) {
-  .page-header {
+  .page-header__contain {
+    position: relative;
+    z-index: 1;
     flex-direction: row;
     flex-wrap: wrap;
     height: 88px;
     padding-left: 50px;
     padding-right: 50px;
-    border-bottom: 1px solid @lightgrey;
+    border-bottom: 1px solid @grey;
     background-color: @white;
   }
 
   .page-header__logo {
-    flex-basis: 50%;
+    flex-basis: 49%;
     order: 0;
     height: 88px;
     text-align: left;
@@ -39,16 +61,16 @@
 }
 
 @media (min-width: 1150px) {
-  .page-header {
+  .page-header__contain {
     flex-wrap: nowrap;
-    width: 1050px;
+    max-width: 1050px;
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    border-bottom: 1px solid #dfdfdf;
   }
 
   .page-header__logo {
-    flex-basis: unset;
+    flex-basis: 246px;
+    flex-grow: 1;
     order: 1;
   }
 }

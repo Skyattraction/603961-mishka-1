@@ -11,7 +11,7 @@
 
 .about-us__title {
   margin: 0;
-  padding: 0 0 28px;
+  padding: 0 0 31px;
 }
 
 .about-us__list {
@@ -21,61 +21,55 @@
 }
 
 .about-us__item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 95px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-size: 17px;
   line-height: 1.18em;
   font-weight: bold;
+}
 
-  &::before {
-    content: "";
-    display: block;
+.about-us__img {
+  display: inline-block;
+
+  path {
+    fill: #63d1bb;
   }
 }
 
-.about-us__item--eco::before {
-  width: 32px;
-  height: 37px;
-  background: url("../img/icon-feature-flower.svg") 0 0 no-repeat scroll transparent;
+.about-us__img-wrap {
+  width: 59px;
+  margin-left: -5px;
+  text-align: center;
 }
 
-.about-us__item--style::before {
-  width: 47px;
-  height: 27px;
-  background: url("../img/icon-feature-money.svg") 0 0 no-repeat scroll transparent;
-}
-
-.about-us__item--like::before {
-  width: 34px;
-  height: 27px;
-  background: url("../img/icon-feature-heart.svg") 0 0 no-repeat scroll transparent;
-}
-
-.about-us__item--handmade::before {
-  width: 35px;
-  height: 34px;
-  background: url("../img/icon-feature-ball.svg") 0 0 no-repeat scroll transparent;
-}
-
-.about-us__item--support::before {
-  width: 55px;
-  height: 23px;
-  background: url("../img/icon-feature-rocket.svg") 0 0 no-repeat scroll transparent;
-}
-
-.about-us__item--pack::before {
-  width: 33px;
-  height: 32px;
-  background: url("../img/icon-feature-gift.svg") 0 0 no-repeat scroll transparent;
+.about-us__text {
+  min-height: 40px;
 }
 
 @media (min-width: 768px) {
+  .about-us__header {
+    margin-bottom: 20px;
+  }
+
   .about-us__list {
+    display: flex;
+    flex-direction: column;
     float: left;
     width: 50%;
-    padding-right: 35px;
     box-sizing: border-box;
+  }
+
+  .about-us__item {
+    min-height: 98px;
+    margin-bottom: 56px;
+    font-size: 20px;
+  }
+
+  .about-us__text {
+    padding-right: 40px;
   }
 }
 
@@ -83,5 +77,14 @@
   .about-us {
     width: 700px;
     margin: 0 auto;
+  }
+
+  .about-us__title {
+    margin: 0;
+    padding: 0 0 25px;
+  }
+
+  .about-us__item {
+    min-height: 99px;
   }
 }

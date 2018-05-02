@@ -1,22 +1,10 @@
 .modal {
-  &--hidden {
-    display: none;
-  }
-}
-
-.modal--active .modal__wrap {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  display: none;
 }
 
 .modal__form {
   width: 100%;
-  padding: 35px 30px;
+  padding: 30px 30px 45px;
   box-sizing: border-box;
   color: @asphalt;
   text-align: center;
@@ -25,26 +13,15 @@
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal--active .modal__form {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 320px;
-  height: 336px;
-  margin: auto;
-}
-
 .modal__title {
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 12px;
   text-transform: uppercase;
 }
 
 .modal__text {
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0 0 23px;
   font-size: 15px;
   line-height: 2em;
 }
@@ -89,26 +66,93 @@
   box-sizing: border-box;
   border: 2px solid @lightgrey;
   cursor: pointer;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
 }
 
 .modal__input:checked ~ .modal__label {
   border: 2px solid @teal-light;
 }
 
-@media (min-width: 768px) {
-  .modal__form {
-    padding: 46px 107px;
+.modal--nojs {
+  &.modal {
+    display: block;
+  }
+}
+
+.modal--active {
+  &.modal {
+    display: flex;
   }
 
-  .modal--active .modal__form {
-    width: 567px;
+  .modal__wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .modal__form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 320px;
+    height: 336px;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .modal__form {
+    padding: 40px 80px 45px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    padding-bottom: 24px;
+  }
+
+  .modal__text {
+    font-size: 17px;
+  }
+
+  .modal__size {
+    display: flex;
+    justify-content: stretch;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal__select-item {
+    flex-grow: 1;
+    width: auto;
+    margin-right: 4px;
+  }
+
+  .modal__label {
+    width: 100%;
   }
 
   .modal__button {
-    max-width: 230px;
+    max-width: 350px;
   }
 
-  .modal--active .modal__button {
-    max-width: 100%;
+  .modal--active {
+    .modal__form {
+      width: 567px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .modal__title {
+    font-size: 30px;
   }
 }

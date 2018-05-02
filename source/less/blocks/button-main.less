@@ -15,10 +15,31 @@
   border: 2px solid @asphalt;
   box-shadow: none;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: @white;
+    background-color: @asphalt;
+  }
+
+  &:active {
+    color: fadeout(@white, 70%);
+    outline: none;
+  }
 
   &--green {
     color: @white;
     background-color: @teal-light;
     border: 0;
+
+    &:hover {
+      color: @white;
+      background-color: fadeout(@teal-light, 30%);
+    }
+
+    &:active {
+      color: fadeout(@white, 70%);
+      outline: none;
+    }
   }
 }

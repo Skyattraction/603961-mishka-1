@@ -5,6 +5,14 @@
   box-sizing: border-box;
   background-color: @white;
   border: 1px solid #ededed;
+
+  &:hover {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 5px 8px -3px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .video__wrap {
@@ -12,7 +20,18 @@
 }
 
 .video__header {
-  padding: 25px 28px 22px 88px;
+  position: relative;
+  padding: 25px 28px 24px 88px;
+}
+
+.video__header-img {
+  position: absolute;
+  top: 34px;
+  left: 33px;
+
+  path {
+    fill: #63d1bb;
+  }
 }
 
 .video__title {
@@ -27,7 +46,7 @@
   width: 100%;
   height: 150px;
   margin-bottom: 25px;
-  background: transparent url("../img/video-mobile@1x.jpg") no-repeat 0 0;
+  background: transparent url("../img/video-mobile@1x.jpg") no-repeat center 0;
   background-size: cover;
 }
 
@@ -39,23 +58,44 @@
   width: 100px;
   height: 78px;
   margin-left: -50px;
-  margin-top: -39px;
+  margin-top: -55px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 .video__start-img {
-  width: 100px;
-  height: 78px;
+  width: 100%;
+  height: 100%;
 }
 
 .video__description {
   margin: 0;
-  padding: 0 28px 25px;
+  padding: 0 40px 25px 32px;
   color: @asphalt;
   font-size: 13px;
-  line-height: 1.85em;
+  line-height: 1.8em;
 }
 
-.video__button {
+.video__button-wrap {
   padding: 0 28px 32px;
 }
 
@@ -68,6 +108,7 @@
 
   .video__wrap {
     order: -1;
+    height: 455px;
   }
 
   .video__file {
@@ -81,8 +122,33 @@
   }
 
   .video__header {
+    padding: 32px 41px 34px 106px;
+    padding-bottom: 34px;
     border: 1px solid #ededed;
     border-bottom: none;
+  }
+
+  .video__header-img {
+    top: 28px;
+    left: 41px;
+  }
+
+  .video__title {
+    font-size: 20px;
+  }
+
+  .video__start {
+    margin-top: -38px;
+  }
+
+  .video__description {
+    padding: 0 41px 33px;
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+  .video__button-wrap {
+    padding: 0 41px 45px;
   }
 }
 
@@ -102,8 +168,18 @@
   .video__header {
     float: right;
     width: 35%;
+    padding: 40px 80px 30px;
     box-sizing: border-box;
     border: none;
+  }
+
+  .video__header-img {
+    position: static;
+    padding-bottom: 20px;
+  }
+
+  .video__title {
+    line-height: 1.2em;
   }
 
   .video__file {
@@ -115,5 +191,16 @@
     width: 35%;
     box-sizing: border-box;
     border: none;
+  }
+
+  .video__description {
+    padding-left: 80px;
+    padding-right: 56px;
+    padding-bottom: 44px;
+  }
+
+  .video__button-wrap {
+    padding-left: 80px;
+    padding-right: 56px;
   }
 }
