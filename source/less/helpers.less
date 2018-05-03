@@ -40,46 +40,25 @@
   .border_wave {
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      right: 0;
-      z-index: 1;
-      height: 10px;
-      background-repeat: repeat;
-      background-size: 20px 20px;
-      background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffffff 13px);
-    }
-
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -1px;
-      right: 0;
+      bottom: 0;
       z-index: 1;
+      width: 100%;
       height: 15px;
-      background-repeat: repeat;
-      background-size: 40px 20px;
-      background-image: radial-gradient(circle at 10px 15px, #ffffff 12px, transparent 13px);
+      background-repeat: repeat-x;
+      background-size: 768px 23px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-color: transparent;
     }
   }
 }
 
 @media (min-width: 1150px) {
-  .border_wave {
-    &::before {
-      height: 17px;
-      background-size: 30px 30px;
-      background-image: radial-gradient(circle at 15px -2px, transparent 17px, #ffffff 18px);
-    }
-
-    &::after {
-      height: 20px;
-      background-size: 60px 30px;
-      background-image: radial-gradient(circle at 15px 20px, #ffffff 17px, transparent 18px);
-    }
+  .border_wave::after {
+    height: 18px;
+    background-size: 1150px 34px;
   }
 }
