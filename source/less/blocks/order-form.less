@@ -87,19 +87,19 @@
 
   &:hover {
     border-color: #62d1ba;
+  }
 
-    & + .order-form__ico path {
-      fill: #62d1ba;
-    }
+  &:hover + .order-form__ico {
+    fill: #62d1ba;
   }
 
   &:focus {
     border-color: #62d1ba;
     outline: none;
+  }
 
-    & + .order-form__ico path {
-      fill: #62d1ba;
-    }
+  &:focus + .order-form__ico {
+    fill: #62d1ba;
   }
 }
 
@@ -214,13 +214,10 @@
   position: absolute;
   right: 8px;
   top: 10px;
+  fill: #cccccc;
 
   &--mail {
     right: 4px;
-  }
-
-  path {
-    fill: #cccccc;
   }
 }
 
@@ -319,10 +316,10 @@
     &--switcher {
       flex-basis: 52%;
       margin-bottom: 0;
+    }
 
-      &:nth-of-type(even) {
-        flex-basis: 48%;
-      }
+    &--switcher:nth-of-type(even) {
+      flex-basis: 48%;
     }
 
     &--radio {
@@ -442,10 +439,10 @@
     &--switcher {
       flex-basis: 262px;
       margin-right: 0;
+    }
 
-      &:nth-of-type(even) {
-        flex-basis: 262px;
-      }
+    &--switcher:nth-of-type(even) {
+      flex-basis: 262px;
     }
   }
 
