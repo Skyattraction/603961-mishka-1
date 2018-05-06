@@ -31,15 +31,16 @@
     color: @white;
     background-color: @teal-light;
     border: 0;
+  }
 
-    &:hover {
-      color: @white;
-      background-color: fadeout(@teal-light, 30%);
-    }
+  &--green:hover {
+    color: @white;
+    background-color: @teal-light;
+    opacity: 0.7;
+  }
 
-    &:active {
-      color: fadeout(@white, 70%);
-      outline: none;
-    }
+  &--green:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 }
