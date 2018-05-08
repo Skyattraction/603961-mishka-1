@@ -107,6 +107,41 @@ module.exports = function(grunt) {
       }
     },
 
+    htmlmin: {
+       dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        expand: true,
+        cwd: "build",
+        src: ["**/*.html"],
+        dest: "build/"
+      }
+    },
+
+    uglify: {
+      dev: {
+        options: {
+          mangle: {
+            reserved: ['jQuery']
+          }
+        },
+        files: [{
+          expand: true,
+          src: ["**/*.js", "!**/*.min.js"],
+          dest: 'build/js',
+          cwd: 'build/js',
+          rename: function (dst, src) {
+            // To keep the source js files and make new files as `*.min.js`:
+            // return dst + '/' + src.replace('.js', '.min.js');
+            // Or to override to src:
+            return dst + '/' + src.replace('.js', '.min.js');
+          }
+        }]
+      }
+    },
+
     browserSync: {
       server: {
         bsFiles: {
@@ -144,6 +179,8 @@ module.exports = function(grunt) {
     "cwebp",
     "imagemin",
     "svgstore",
-    "posthtml"
+    "posthtml",
+    "htmlmin",
+    "uglify"
   ]);
 };

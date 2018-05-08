@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Вязание на заказ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header  page-header--nojs">
+    <header class="page-header  page-header--nojs  j-header">
       <div class="page-header__contain">
         <div class="page-header__logo">
           <a class="page-header__logo-link" href="index.html">
@@ -236,7 +238,7 @@
             </a>
           </div>
           <div class="credits__developer">
-            <a class="credits__developer-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
+            <a class="credits__developer-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
               <svg class="credits__developer-img" role="img" x="0px" y="0px" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
@@ -249,5 +251,6 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <script src="js/script.min.js" async></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header  page-header--nojs">
+    <header class="page-header  page-header--nojs  j-header">
       <div class="page-header__contain">
         <div class="page-header__logo">
           <a class="page-header__logo-link" href="index.html">
@@ -73,7 +73,7 @@
       </header>
       <section class="page-catalog__list  catalog">
         <article class="catalog__item  goods">
-          <a class="goods__link" href="#">
+          <a class="goods__link" href="goods_page_hare.html">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/photo-hare-desktop@1x.webp 1x, img/webp/photo-hare-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-hare-tablet@1x.webp 1x, img/webp/photo-hare-tablet@2x.webp 2x">
@@ -84,11 +84,11 @@
             </picture>
           </a>
           <div class="goods__info">
-            <a class="goods__title" href="#">Зайчик-попрыгайчик</a>
+            <a class="goods__title" href="goods_page_hare.html">Зайчик-попрыгайчик</a>
             <div class="goods__options">Рост 30 см, вес 200 г</div>
             <div class="goods__price">
               <span>1 200 руб.</span>
-              <a class="goods__order  j-modal" href="#" aria-label="Добавить в корзину">
+              <a class="goods__order  j-modal-open" href="#" aria-label="Добавить в корзину">
                 <svg class="goods__img-basket" role="img" x="0px" y="0px" width="20.294px" height="18.849px">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -97,7 +97,7 @@
           </div>
         </article>
         <article class="catalog__item  goods">
-          <a class="goods__link" href="#">
+          <a class="goods__link" href="goods_page_bowl.html">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/photo-bowl-desktop@1x.webp 1x, img/webp/photo-bowl-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-bowl-tablet@1x.webp 1x, img/webp/photo-bowl-tablet@2x.webp 2x">
@@ -108,11 +108,11 @@
             </picture>
           </a>
           <div class="goods__info">
-            <a class="goods__title" href="#">Корзинка для белья</a>
+            <a class="goods__title" href="goods_page_bowl.html">Корзинка для белья</a>
             <div class="goods__options">Диаметр 15 см, высота 10 см</div>
             <div class="goods__price">
               <span>690 руб.</span>
-              <a class="goods__order  j-modal" href="#" aria-label="Добавить в корзину">
+              <a class="goods__order  j-modal-open" href="#" aria-label="Добавить в корзину">
                 <svg class="goods__img-basket" role="img" x="0px" y="0px" width="20.294px" height="18.849px">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -121,7 +121,7 @@
           </div>
         </article>
         <article class="catalog__item  goods">
-          <a class="goods__link" href="#">
+          <a class="goods__link" href="goods_page_toys.html">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/photo-toys-desktop@1x.webp 1x, img/webp/photo-toys-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-toys-tablet@1x.webp 1x, img/webp/photo-toys-tablet@2x.webp 2x">
@@ -132,11 +132,11 @@
             </picture>
           </a>
           <div class="goods__info">
-            <a class="goods__title" href="#">Большая корзинка для&nbsp;игрушек</a>
+            <a class="goods__title" href="goods_page_toys.html">Большая корзинка для&nbsp;игрушек</a>
             <div class="goods__options">Диаметр 30 см, высота 30 см</div>
             <div class="goods__price">
               <span>1 500 руб.</span>
-              <a class="goods__order  j-modal" href="#" aria-label="Добавить в корзину">
+              <a class="goods__order  j-modal-open" href="#" aria-label="Добавить в корзину">
                 <svg class="goods__img-basket" role="img" x="0px" y="0px" width="20.294px" height="18.849px">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -198,7 +198,7 @@
             </a>
           </div>
           <div class="credits__developer">
-            <a class="credits__developer-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
+            <a class="credits__developer-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
               <svg class="credits__developer-img" role="img" x="0px" y="0px" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
@@ -234,5 +234,6 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <script src="js/script.min.js" async></script>
   </body>
 </html>
