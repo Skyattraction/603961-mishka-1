@@ -6,7 +6,7 @@ window.onload = function() {
 
   header.classList.remove("page-header--nojs");
   popup.classList.remove("modal--nojs");
-  
+
   switcher.addEventListener("click", function() {
     if (header.classList.contains("page-header--nojs")) {
       header.classList.remove("page-header--nojs");
@@ -14,7 +14,7 @@ window.onload = function() {
       header.classList.add("page-header--nojs");
     }
   });
-  
+
   for (var i = 0; i < popupOpen.length; i++) {
     popupOpen[i].addEventListener("click", function() {
       popup.classList.add("modal--active");
