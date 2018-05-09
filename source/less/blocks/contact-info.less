@@ -3,6 +3,7 @@
 }
 
 .contact-info__title {
+  position: relative;
   margin: 0;
   padding: 0 0 15px;
   font-size: 18px;
@@ -57,19 +58,20 @@
     padding: 0 50px 43px;
   }
 
-  .contact-info__flag {
-    position: absolute;
-    top: -14px;
-    right: 54px;
-    display: block;
-    width: 47px;
-    height: 81px;
-    background: url("../img/icon-flag.svg") 0 0 no-repeat scroll transparent;
-  }
-
   .contact-info__title {
     padding: 0 0 34px;
     font-size: 43px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -14px;
+      right: 4px;
+      display: block;
+      width: 47px;
+      height: 81px;
+      background: url("../img/icon-flag.svg") 0 0 no-repeat scroll transparent;
+    }
   }
 
   .contact-info__table {
@@ -98,12 +100,12 @@
   .contact-info__title {
     padding: 65px 0 30px;
     font-size: 53px;
-  }
-
-  .contact-info__flag {
-    top: 60px;
-    right: auto;
-    left: 65px;
+    
+    &::after {
+      top: 60px;
+      right: auto;
+      left: -110px;
+    }
   }
 
   .contact-info__table {
