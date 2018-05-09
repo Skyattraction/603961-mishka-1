@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header  page-header--nojs">
+    <header class="page-header  page-header--nojs  j-header">
       <div class="page-header__contain">
         <div class="page-header__logo">
           <a class="page-header__logo-link" href="index.html">
@@ -134,7 +136,7 @@
           <div class="week-goods__price">
             Цена: 990 руб.
           </div>
-          <button class="week-goods__button  button-main  j-modal" type="button">Заказать</button>
+          <button class="week-goods__button  button-main  j-modal-open" type="button">Заказать</button>
         </div>
       </section>
       <section class="page-main__about-us  about-us">
@@ -271,6 +273,7 @@
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Как добраться" title="" class="map__img">
           </picture>
+          <iframe class="map__live" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1525717282900" width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="page-footer__message">
           <a class="page-footer__button  button-main" href="contactus.html">Напишите нам</a>
@@ -303,7 +306,7 @@
             </a>
           </div>
           <div class="credits__developer">
-            <a class="credits__developer-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
+            <a class="credits__developer-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">Разработано
               <svg class="credits__developer-img" role="img" x="0px" y="0px" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
@@ -312,7 +315,7 @@
         </div>
       </section>
     </footer>
-    <div class="modal  modal--nojs j-modal">
+    <div class="modal  modal--nojs  j-modal">
       <div class="modal__wrap">
         <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
           <h2 class="modal__title  title  title--second">Добавить в&nbsp;корзину</h2>
@@ -339,5 +342,6 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js" async></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
